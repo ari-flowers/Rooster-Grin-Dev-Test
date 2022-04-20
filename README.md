@@ -1,5 +1,5 @@
 ## Rooster Grin Media take home dev test
-
+Deployed site can be found [here](https://luminous-pika-84180c.netlify.app/)
 ### Write up questions:
 
 1. What you technologies you used and why (if you only used html, css, and js please explain any templates or frameworks you may have used i.e. bootstrap)  
