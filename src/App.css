@@ -1,38 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@font-face {
+  font-family: 'ElephantOutline';
+  src: url('../public/assets/Elephant-Outline.otf');
+}
 .App {
+  scroll-behavior: smooth;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* -------- Site-wide utility -------- */
+.purple-text {
+  color: rgb(87, 12, 156);
+}
+.orange-button {
+  background-color: rgb(255, 128, 0);
+  color: white;
+  border: solid rgb(255, 128, 0);
+  font-weight: bold;
+  padding: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* ---- Header Styles ---- */
+#title-container {
+  background-image: url("../public/assets/hero.jpg");
+  background-size: cover;
+  padding-top: 18rem;
+  padding-bottom: 18rem;
+  grid-column: span 2;
+}
+#logo-white {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 2rem;
+  padding-left: 4rem;
+  max-width: 23%;
+  opacity: .8;
+}
+.hero-title {
+  font-family: 'ElephantOutline';
+  color: white;
+  font-size: 5rem;
+}
+#rooster {
+  font-weight: bold;
+  color: white;
+  opacity: .9;
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
+.animate__animated.animate__fadeInDown {
+  --animate-duration: 3s;
+}
+#hero-button {
+  background-color: rgb(168, 80, 209);
+  color: white;
+  border: rgb(168, 80, 209);
+  padding: 1rem;
+  font-weight: bold;
+}
+/*   -------- TextTile Styles --------  */
+.texttile-wrapper {
+  text-align: left;
+  padding: 18%;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* -------- ImageTile Styles -------- */
+#hikers {
+  background-image: url('../public/assets/img-1.jpg');
+  background-size: cover;
+}
+
+
+/* -------- Banner1 Styles -------- */
+#banner-container1 {
+  background-image: url("../public/assets/banner-1.jpg");
+  background-size: cover;
+  padding: 18%;
+  display: flex;
+  grid-column: span 2;
+
+}
+#banner-content {
+  text-align: left;    
+}
+
+/* -------- IconTile Styles -------- */
+#icon-tile-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #f1f1f1;
+}
+.icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icons {
+  border: 2px solid rgb(168, 80, 209);
+  border-radius: 50%;
+  max-height: 5rem;
+
+}
+.icons:hover {
+  cursor: pointer;
+}
+
+/* -------- Banner2 Styles -------- */
+#banner-container2 {
+  background-image: url("../public/assets/banner-2.jpg");
+  background-size: cover;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: span 2;
+}
+#banner-content2 {
+  text-align: left;
+
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+/* -------- StarTile Styles -------- */
+#star-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+#rating-text {
+  color: rgb(45, 45, 45);
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+#star-rating {
+  color: rgb(255, 128, 0);
 }
 
-.App-link {
-  color: #61dafb;
+/* -------- Carousel Styles -------- */
+@media (max-width: 900px) {
+  .carousel {
+    width: auto;
+    height: auto;
+  }
+}
+#carousel-wrapper {
+  display: flex;
+}
+.rating {
+  object-fit: cover;
+  width: 100%;
+  max-width: 100%;
+}
+.carousel-control-next,
+.carousel-control-prev,
+.carousel-indicators {
+  filter: invert(100%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* -------- Footer Styles -------- */
+.foot-wrapper {
+  background-color: #f1f1f1;
+  padding-top: 1rem;
+  grid-column: span 2;
+}
+.social {
+  width: 5%;
+  margin: .25rem;
+  margin-bottom: 2rem;
+}
+
+/* -------- Hover Style Sheet -------- */
+/* Grow */
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
